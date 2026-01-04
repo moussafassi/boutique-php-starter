@@ -36,7 +36,7 @@ Exemple :
 ```
 
 ## Base de données (Jour 7+)
-
+Si vous n'arrivez pas a créer votre base de données, vous pouvez :
 ```bash
 mysql -u root -p < config/database.sql
 ```
