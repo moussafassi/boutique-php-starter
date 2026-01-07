@@ -3,7 +3,7 @@
 $brand = "Nike";
 $model = "Air Max";
 //avec concatenation
-echo "chaussure " , $brand ," ", $model;
+echo "chaussure " . $brand ." ". $model;
 //avec interpollation
 echo " chaussure $brand $model";
 //avec sprintf
