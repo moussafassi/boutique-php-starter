@@ -1,5 +1,5 @@
 <?php
-$marchandise = [
+$marchandises = [
     [
         "nom" => "pull à capuche",
         "images" =>
@@ -20,6 +20,7 @@ $marchandise = [
                 "L" => 40,
                 "XL" => 25
             ],
+            "prices"=> 80
     ],
     [
         "nom" => "jean 501 levi's",
@@ -37,6 +38,7 @@ $marchandise = [
                 "40" => 45,
                 "44" => 30
             ],
+            "prices"=> 100,
     ],
     [
         "nom" => "nike air Jordan",
@@ -51,7 +53,8 @@ $marchandise = [
                 "40" => 10,
                 "41" => 25,
                 "42" => 25,
-            ]
+            ],
+            "prices"=> 90,
     ],
     [
         "nom" => "veste en jean",
@@ -68,6 +71,7 @@ $marchandise = [
                 "L" => 22,
                 "XL" => 12
             ],
+            "prices"=> 75
     ],
     [
         "nom" => "casquette nike",
@@ -81,6 +85,7 @@ $marchandise = [
             [
                 "unique" => 50
             ],
+            "prices"=> 50
     ],
     [
         "nom" => "sweat col rond",
@@ -96,6 +101,7 @@ $marchandise = [
                 "L" => 25,
                 "XL" => 15
             ],
+            "prices"=> 55,
     ],
 
 ];
@@ -111,102 +117,108 @@ $marchandise = [
 
 <body>
     <div class="hoodies">
-        <h1><?= $marchandise[0]["nom"] ?></h1>
-        <img src="<?= $marchandise[0]["images"]["url1"] ?>" />
-        <img src="<?= $marchandise[0]["images"]["url2"] ?>" />
+        <h1><?= $marchandises[0]["nom"] ?></h1>
+        <img src="<?= $marchandises[0]["images"]["url1"] ?>" />
+        <img src="<?= $marchandises[0]["images"]["url2"] ?>" />
         <select type="taille" id="qantité">
-            <option value="1"><?= $marchandise[0]["sizes"][0] . " " . "en stock" . " " . $marchandise[0]["stocks"]["S"] ?>
+           <option value="1"><?= $marchandises[0]["sizes"][0] . " " . "en stock" . " " . $marchandises[0]["stocks"]["S"] ?>
             </option>
-            <option value="2"><?= $marchandise[0]["sizes"][1] . " " . "en stock" . " " . $marchandise[0]["stocks"]["M"] ?>
+            <option value="2"><?= $marchandises[0]["sizes"][1] . " " . "en stock" . " " . $marchandises[0]["stocks"]["M"] ?>
             </option>
-            <option value="3"><?= $marchandise[0]["sizes"][2] . " " . "en stock" . " " . $marchandise[0]["stocks"]["L"] ?>
+            <option value="3"><?= $marchandises[0]["sizes"][2] . " " . "en stock" . " " . $marchandises[0]["stocks"]["L"] ?>
             </option>
-            <option value="4"><?= $marchandise[0]["sizes"][3] . " " . "en stock" . " " . $marchandise[0]["stocks"]["XL"] ?>
+            <option value="4"><?= $marchandises[0]["sizes"][3] . " " . "en stock" . " " . $marchandises[0]["stocks"]["XL"] ?>
             </option>
         </select>
+        <p><?="prix"." ".$marchandises [0]["prices"]." "."euros"  ?></p>
     </div>
     <div class="pants">
-        <h1><?= $marchandise[1]["nom"] ?></h1>
-        <img src="<?= $marchandise[1]["images"]["url1"] ?>" />
-        <img src="<?= $marchandise[1]["images"]["url2"] ?>" />
+        <h1><?= $marchandises[1]["nom"] ?></h1>
+        <img src="<?= $marchandises[1]["images"]["url1"] ?>" />
+        <img src="<?= $marchandises[1]["images"]["url2"] ?>" />
         <select type="taille" id="qantité">
             <option value="1">
-                <?= "Taille : ", $marchandise[1]["sizes"]["0"] . " " . ", en stock" . " " . $marchandise[1]["stocks"]["36"] ?>
+                <?= "Taille : ", $marchandises[1]["sizes"]["0"] . " " . ", en stock" . " " . $marchandises[1]["stocks"]["36"] ?>
             </option>
             <option value="2">
-                <?= "Taille : ", $marchandise[1]["sizes"]["1"] . " " . ", en stock" . " " . $marchandise[1]["stocks"]["38"] ?>
+                <?= "Taille : ", $marchandises[1]["sizes"]["1"] . " " . ", en stock" . " " . $marchandises[1]["stocks"]["38"] ?>
             </option>
             <option value="3">
-                <?= "Taille : ", $marchandise[1]["sizes"]["2"] . " " . ", en stock" . " " . $marchandise[1]["stocks"]["40"] ?>
+                <?= "Taille : ", $marchandises[1]["sizes"]["2"] . " " . ", en stock" . " " . $marchandises[1]["stocks"]["40"] ?>
             </option>
             <option value="4">
-                <?= "Taille : ", $marchandise[1]["sizes"]["3"] . " " . ", en stock" . " " . $marchandise[1]["stocks"]["44"] ?>
+                <?= "Taille : ", $marchandises[1]["sizes"]["3"] . " " . ", en stock" . " " . $marchandises[1]["stocks"]["44"] ?>
             </option>
         </select>
+        <p><?="prix"." ".$marchandises [1]["prices"]." "."euros"  ?></p>
     </div>
     <div class="shoes">
-        <h1><?= $marchandise[2]["nom"] ?></h1>
-        <img src="<?= $marchandise[2]["images"]["url1"] ?>" />
-        <img src="<?= $marchandise[2]["images"]["url2"] ?>" />
+        <h1><?= $marchandises[2]["nom"] ?></h1>
+        <img src="<?= $marchandises[2]["images"]["url1"] ?>" />
+        <img src="<?= $marchandises[2]["images"]["url2"] ?>" />
         <select type="taille" id="qantité">
             <option value="1">
-                <?= "Taille : ", $marchandise[2]["sizes"][0] . " " . ", en stock" . " " . $marchandise[2]["stocks"]["40"] ?>
+                <?= "Taille : ", $marchandises[2]["sizes"][0] . " " . ", en stock" . " " . $marchandises[2]["stocks"]["40"] ?>
             </option>
             <option value="2">
-                <?= "Taille : ", $marchandise[2]["sizes"][1] . " " . ", en stock" . " " . $marchandise[2]["stocks"]["41"] ?>
+                <?= "Taille : ", $marchandises[2]["sizes"][1] . " " . ", en stock" . " " . $marchandises[2]["stocks"]["41"] ?>
             </option>
             <option value="3">
-                <?= "Taille : ", $marchandise[2]["sizes"][2] . " " . ", en stock" . " " . $marchandise[2]["stocks"]["42"] ?>
+                <?= "Taille : ", $marchandises[2]["sizes"][2] . " " . ", en stock" . " " . $marchandises[2]["stocks"]["42"] ?>
             </option>
         </select>
+        <p><?="prix"." ".$marchandises [2]["prices"]." "."euros"  ?></p>
     </div>
     <div class="jacket">
-        <h1><?= $marchandise[3]["nom"] ?></h1>
-        <img src="<?= $marchandise[3]["images"]["url1"] ?>" />
-        <img src="<?= $marchandise[3]["images"]["url2"] ?>" />
+        <h1><?= $marchandises[3]["nom"] ?></h1>
+        <img src="<?= $marchandises[3]["images"]["url1"] ?>" />
+        <img src="<?= $marchandises[3]["images"]["url2"] ?>" />
         <select type="taille" id="qantité">
             <option value="1">
-                <?= "Taille : ", $marchandise[3]["sizes"][0] . " " . ", , en stock" . " " . $marchandise[0]["stocks"]["S"] ?>
+                <?= "Taille : ", $marchandises[3]["sizes"][0] . " " . ", , en stock" . " " . $marchandises[0]["stocks"]["S"] ?>
             </option>
             <option value="2">
-                <?= "Taille : ", $marchandise[3]["sizes"][1] . " " . ", , en stock" . " " . $marchandise[0]["stocks"]["M"] ?>
+                <?= "Taille : ", $marchandises[3]["sizes"][1] . " " . ", , en stock" . " " . $marchandises[0]["stocks"]["M"] ?>
             </option>
             <option value="3">
-                <?= "Taille : ", $marchandise[3]["sizes"][2] . " " . ", en stock" . " " . $marchandise[0]["stocks"]["L"] ?>
+                <?= "Taille : ", $marchandises[3]["sizes"][2] . " " . ", en stock" . " " . $marchandises[0]["stocks"]["L"] ?>
             </option>
             <option value="4">
-                <?= "Taille : ", $marchandise[3]["sizes"][3] . " " . ", en stock" . " " . $marchandise[0]["stocks"]["XL"] ?>
+                <?= "Taille : ", $marchandises[3]["sizes"][3] . " " . ", en stock" . " " . $marchandises[0]["stocks"]["XL"] ?>
             </option>
         </select>
+        <p><?="prix"." ".$marchandises [3]["prices"]." "."euros"  ?></p>
     </div>
     <div class="hat">
-        <h1><?= $marchandise[4]["nom"] ?></h1>
-        <img src="<?= $marchandise[4]["images"]["url1"] ?>" />
-        <img src="<?= $marchandise[4]["images"]["url2"] ?>" />
+        <h1><?= $marchandises[4]["nom"] ?></h1>
+        <img src="<?= $marchandises[4]["images"]["url1"] ?>" />
+        <img src="<?= $marchandises[4]["images"]["url2"] ?>" />
         <select type="taille" id="qantité">
             <option value="1">
-                <?= "Taille : ", $marchandise[4]["sizes"][0] . " " . " , en stock" . " " . $marchandise[4]["stocks"]["unique"] ?>
+                <?= "Taille : ", $marchandises[4]["sizes"][0] . " " . " , en stock" . " " . $marchandises[4]["stocks"]["unique"] ?>
             </option>
         </select>
+        <p><?="prix"." ".$marchandises [4]["prices"]." "."euros"  ?></p>
     </div>
     <div class="sweat">
-        <h1><?= $marchandise[5]["nom"] ?></h1>
-        <img src="<?= $marchandise[5]["images"]["url1"] ?>" />
-        <img src="<?= $marchandise[5]["images"]["url2"] ?>" />
+        <h1><?= $marchandises[5]["nom"] ?></h1>
+        <img src="<?= $marchandises[5]["images"]["url1"] ?>" />
+        <img src="<?= $marchandises[5]["images"]["url2"] ?>" />
         <select type="taille" id="qantité">
             <option value="1">
-                <?= "Taille : ", $marchandise[5]["sizes"][0] . " " . ", en stock" . " " . $marchandise[5]["stocks"]["S"] ?>
+                <?= "Taille : ", $marchandises[5]["sizes"][0] . " " . ", en stock" . " " . $marchandises[5]["stocks"]["S"] ?>
             </option>
             <option value="2">
-                <?= "Taille : ", $marchandise[5]["sizes"][1] . " " . ", en stock" . " " . $marchandise[5]["stocks"]["M"] ?>
+                <?= "Taille : ", $marchandises[5]["sizes"][1] . " " . ", en stock" . " " . $marchandises[5]["stocks"]["M"] ?>
             </option>
             <option value="3">
-                <?= "Taille : ", $marchandise[5]["sizes"][2] . " " . ", en stock" . " " . $marchandise[5]["stocks"]["L"] ?>
+                <?= "Taille : ", $marchandises[5]["sizes"][2] . " " . ", en stock" . " " . $marchandises[5]["stocks"]["L"] ?>
             </option>
             <option value="4">
-                <?= "Taille : ", $marchandise[5]["sizes"][3] . " " . ", en stock" . " " . $marchandise[5]["stocks"]["XL"] ?>
+                <?= "Taille : ", $marchandises[5]["sizes"][3] . " " . ", en stock" . " " . $marchandises[5]["stocks"]["XL"] ?>
             </option>
         </select>
+        <p><?="prix"." ".$marchandises [5]["prices"]." "."euros" ?></p>
     </div>
 </body>
 
