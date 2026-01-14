@@ -112,19 +112,27 @@ $marchandises = [
     ],
 
 ];
-function produit($marchandises){
-foreach($marchandises as $marchandise){
+$totalProduits= count($marchandises);
+$produitsTrouves= 0;
+foreach ($marchandises as $marchandise) {
     if($marchandise["price"]>=50){
         continue;
     }
+    $enstock = false;
+    foreach ($marchandise["stocks"] as $stock) {
+        if($stock > 0 ){
+            $enstock = true;
+            break;
+        }
+    }
+    if(!$enstock){
+        continue;
+    }
+   
+    $produitsTrouves++;
    
 }
-foreach($marchandise["size"] as $ize){
-    if($ize["stock"]=== 0){
-}
-}
-};
-
+echo "$produitsTrouves produits trouvés sur $totalProduits"
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -157,10 +165,15 @@ foreach($marchandise["size"] as $ize){
                     <option value=<?= $size ?>>
                         <?= "Taille : ", $size . " " . ", en stock" . " " . $marchandise["stocks"][$size] ?>
                     <?php endforeach; ?>
+                   
           
                 </option>
+                 
             </select>
+          
         <?php endforeach; ?>
+        
+          <p><?="$produitsTrouves produits trouvés sur $totalProduits"?></p>
     </article>
 </body>
 
