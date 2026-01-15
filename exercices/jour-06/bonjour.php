@@ -1,4 +1,5 @@
 <?php
+session_start();
 function afficheMessage($name = null, $age = null)
 {
     if ($name && $name !== "") {
@@ -23,4 +24,5 @@ if(isset($_GET["age"])) {
     $age = $_GET["age"];
 }
 echo afficheMessage($_GET["name"] , $_GET["age"] );
+
 ?>
