@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 function afficheMessage($name = null, $age = null)
 {
     if ($name && $name !== "") {
